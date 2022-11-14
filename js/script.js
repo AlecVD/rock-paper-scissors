@@ -7,3 +7,7 @@ function getComputerChoice(){
 }
 
 console.log(getComputerChoice());
+
+function playRound(playerChoice,computerChoice){
+
+}
