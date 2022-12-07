@@ -6,9 +6,20 @@ function getComputerChoice(){
     return choices[Math.floor(Math.random()*choices.length)];
 }
 
-console.log(getComputerChoice());
+function getPlayerChoice(){
+    choice = ""
+    while(!choices.includes(choice)){
+        choice = prompt("Input your Choice")
+    }
+    return choice
+}
+
+//console.log(getComputerChoice());
+//console.log(getPlayerChoice());
 
 function playRound(playerChoice,computerChoice){
+    console.log("playerChoice: "+playerChoice)
+    console.log("computerChoice: "+computerChoice)
     switch(true){
         case playerChoice === computerChoice:
             return "Tie";
@@ -26,7 +37,6 @@ function playRound(playerChoice,computerChoice){
         default:
             console.log("?")
     }
-
 }
 
-console.log(playRound(prompt("Player Input"),getComputerChoice()))
+console.log(playRound(getPlayerChoice(),getComputerChoice()))
