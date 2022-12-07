@@ -1,25 +1,17 @@
 console.log("Rock Paper Scissors Game")
+alert("Rock Paper Scissors")
 
-const choices = ["Rock","Paper","Scissors"];
+const choices = ["Rock","Paper","Scissors"]
 
 function getComputerChoice(){
     return choices[Math.floor(Math.random()*choices.length)];
 }
 
-function getPlayerChoice(){
-    choice = ""
-    while(!choices.includes(choice)){
-        choice = prompt("Input your Choice")
-    }
-    return choice
-}
-
-//console.log(getComputerChoice());
-//console.log(getPlayerChoice());
+document.getElementById("rock").addEventListener("click",function(){playRound("Rock",getComputerChoice())})
+document.getElementById("rock").addEventListener("click",function(){playRound("Rock",getComputerChoice())})
+document.getElementById("rock").addEventListener("click",function(){playRound("Rock",getComputerChoice())})
 
 function playRound(playerChoice,computerChoice){
-    console.log("playerChoice: "+playerChoice)
-    console.log("computerChoice: "+computerChoice)
     switch(true){
         case playerChoice === computerChoice:
             return "Tie";
@@ -39,4 +31,4 @@ function playRound(playerChoice,computerChoice){
     }
 }
 
-console.log(playRound(getPlayerChoice(),getComputerChoice()))
+//console.log(playRound(getPlayerChoice(),getComputerChoice()))
